@@ -49,7 +49,6 @@ function shortestPath(graph,start,finish) {
                 smallest = previous[smallest];
             }
             break;
-            path.push(start)
         }
         if(smallest || distances[smallest] !== Infinity){
             for(let neighbor in graph.adjacencyList[smallest]){
@@ -64,7 +63,7 @@ function shortestPath(graph,start,finish) {
             }
         }
     }
-    return path.reverse()
+    return path.concat(smallest).reverse()
 }
 var graph = new Graph()
 graph.addNode('A')
