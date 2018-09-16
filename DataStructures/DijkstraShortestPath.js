@@ -26,6 +26,8 @@ class PriorityQueue {
   };
 }
 function shortestPath(graph,start,finish) {
+    const nodes = new PriorityQueue();
+    let path = []
     const distances = {};
     const previous = {};
     let smallest;
